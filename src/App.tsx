@@ -1,25 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Card, Toast, Button } from 'antd-mobile'
+
+import styles from './App.module.scss'
 
 function App() {
+    const onClick = () => {
+    Toast.show('点击了卡片')
+    }
+
+    const onHeaderClick = () => {
+    Toast.show('点击了卡片Header区域')
+    }
+
+    const onBodyClick = () => {
+        Toast.show('点击了卡片Body区域')
+    }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+        <Button color='primary'>Primary</Button>
+    </>
   );
 }
 
