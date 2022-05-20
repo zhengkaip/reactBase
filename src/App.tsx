@@ -1,25 +1,20 @@
 import React from 'react'
 import { Card, Toast, Button } from 'antd-mobile'
 
-import styles from './App.module.scss'
+import Style from './App.module.scss'
 
 function App() {
-    const onClick = () => {
-    Toast.show('点击了卡片')
-    }
-
-    const onHeaderClick = () => {
-    Toast.show('点击了卡片Header区域')
-    }
-
-    const onBodyClick = () => {
-        Toast.show('点击了卡片Body区域')
-    }
   return (
     <>
-        <Button color='primary'>Primary</Button>
+      <Button className={Style.btn} color="primary">
+        Primary
+      </Button>
+      <p className={Style.p}>ppp</p>
+      <Card title="卡片标题" className={Style.p}>
+        卡片内容
+      </Card>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
